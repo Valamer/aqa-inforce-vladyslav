@@ -1,0 +1,187 @@
+Test id: 1
+Priority: Critical
+Description: Check that the room can be booked with valid data
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+Test execution steps: 
+      1.  Find first room in list and click "Book this room" button
+      2.  Enter valid firstname  
+      3.  Enter valid lastname    
+      4.  Enter valid email 		 
+      5.  Enter valid phone			 
+      6.  Press and hold left mouse button on empty box in calendar with today or future date 
+      7.  Move mouse 1 boxes into the future and release mouse button
+      8.  Click "Book" button
+Expected results: 
+   Pop-up message with text: "Booking Successful! Congratulations! Your booking has been confirmed for: " and correct dates at the end of message
+Actual results: 
+   Pop-up message with text: "Booking Successful! Congratulations! Your booking has been confirmed for: " and correct dates at the end of message 
+Status: pass
+
+Test id: 2
+Priority: Low
+Description: Check that the room can’t be booked with past date
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+Test execution steps: 
+      1.  Find first room in list and click "Book this room" button
+      2.  Enter valid firstname   
+      3.  Enter valid lastname     
+      4.  Enter valid email 		   
+      5.  Enter valid phone
+      6.  Press and hold left mouse button on empty box in calendar with today or past date 
+      7.  Move mouse 1 boxes into the past and release mouse button
+      8.  Click "Book" button
+Expected results: 
+   Error message with text that clarify invalid input
+Actual results: 
+    Pop-up message with text: "Booking Successful! Congratulations! Your booking has been confirmed for: " and correct dates at the end of message
+Status: fail
+
+Test id: 3
+Priority: Medium
+Description: Check that the room can’t be booked with unavailable date
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+      5. At least 1 published room must contain unavailable date
+Test execution steps: 
+      1.  Find first room with unavailable dates in list and click "Book this room" button
+      2.  Enter valid firstname   
+      3.  Enter valid lastname     
+      4.  Enter valid email 		   
+      5.  Enter valid phone			   
+      6.  Press and hold left mouse button on any box in calendar 
+      7.  Move mouse to any box that marked unavailable or past that box and release mouse button
+      8.  Click "Book" button
+Expected results: 
+   Error message with text that clarify invalid input
+Actual results: 
+   Error message with text that clarify invalid input
+Status: pass
+
+Test id: 4
+Priority: High
+Description: Check that the room can’t be booked with invalid name
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+Test execution steps: 
+      1.  Find first room in list and click "Book this room" button
+      2.  Enter invalid firstname  
+      3.  Enter valid lastname      
+      4.  Enter valid email 		   
+      5.  Enter valid phone			   
+      6.  Press and hold left mouse button on empty box in calendar with today or future date 
+      7.  Move mouse 1 boxes into the future and release mouse button
+      8.  Click "Book" button
+Expected results: 
+   Error message with text that clarify invalid input
+Actual results: 
+   Error message with text that clarify invalid input
+Status: pass
+
+Test id: 5
+Priority: High
+Description: Check that the room can’t be booked with invalid lastname
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+Test execution steps: 
+      1.  Find first room in list and click "Book this room" button
+      2.  Enter valid firstname   
+      3.  Enter invalid lastname     
+      4.  Enter valid email 		   
+      5.  Enter valid phone			   
+      6.  Press and hold left mouse button on empty box in calendar with today or future date 
+      7.  Move mouse 1 boxes into the future and release mouse button
+      8.  Click "Book" button
+Expected results: 
+   Error message with text that clarify invalid input
+Actual results: 
+   Error message with text that clarify invalid input
+Status: pass
+
+Test id: 6
+Priority: High
+Description: Check that the room can’t be booked with invalid email
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+Test execution steps: 
+      1.  Find first room in list and click "Book this room" button
+      2.  Enter valid firstname   
+      3.  Enter valid lastname     
+      4.  Enter invalid email 		   
+      5.  Enter valid phone			   
+      6.  Press and hold left mouse button on empty box in calendar with today or future date 
+      7.  Move mouse 1 boxes into the future and release mouse button
+      8.  Click "Book" button
+Expected results: 
+   Error message with text that clarify invalid input
+Actual results: 
+   Error message with text that clarify invalid input
+Status: pass
+
+Test id: 7
+Priority: High
+Description: Check that the room can’t be booked with invalid phone number
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+Test execution steps: 
+      1.  Find first room in list and click "Book this room" button
+      2.  Enter valid firstname   
+      3.  Enter valid lastname     
+      4.  Enter valid email 		   
+      5.  Enter invalid phone			   
+      6.  Press and hold left mouse button on empty box in calendar with today or future date 
+      7.  Move mouse 1 boxes into the future and release mouse button
+      8.  Click "Book" button
+Expected results: 
+   Error message with text that clarify invalid input
+Actual results: 
+   Error message with text that clarify invalid input
+Status: pass
+
+Test id: 8
+Priority: Low
+Description: Check that the earlier booked dates show as Unavailable
+Preconditions: 
+      1. Using desktop computer
+      2. Using Chrome browser
+      3. Opened automationintesting.online site
+      4. At least 1 room published
+Test execution steps: 
+      1.  Find first room in list and click "Book this room" button
+      2.  Enter valid firstname   
+      3.  Enter valid lastname     
+      4.  Enter valid email 		   
+      5.  Enter invalid phone			   
+      6.  Press and hold left mouse button on empty box in calendar with today or future date 
+      7.  Move mouse 1 boxes into the future and release mouse button
+      8.  Click "Book" button
+      9.  Close pop-up window
+      10. Reload page
+      11. Find same room in list and click "Book this room" button
+Expected results: 
+   Selected earlier boxes shown as Unavailable
+Actual results: 
+   Selected earlier boxes shown as Unavailable
+Status: pass
